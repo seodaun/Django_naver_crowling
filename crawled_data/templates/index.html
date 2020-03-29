@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+  <head>
+    <title>네이버 급상승 검색어 top20</title> 
+    <link rel="stylesheet" href="{% static 'css/default.css' %}" />
+  </head>
+  <body>
+      {% block content %} 
+
+      <table>
+        <th>네이버 급상승 검색어 top 20</th>
+        <tr>
+        {% for data in datas %}
+        
+        <td class="post">
+          <div>
+            {{ data.title }}</a>
+          </div> 
+        </tr>
+        </td>
+        {% endfor %}
+      </table>
+    {% endblock %}
+  </body>
+</html>
