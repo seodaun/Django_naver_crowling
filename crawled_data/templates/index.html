@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>네이버 급상승 검색어 top20</title> 
-    <link rel="stylesheet" href="{% static 'css/default.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
       {% block content %} 
-
+      <div class = "list_board">
       <table>
         <th>네이버 급상승 검색어 top 20</th>
         <tr>
@@ -14,12 +14,15 @@
         
         <td class="post">
           <div>
-            {{ data.title }}</a>
+            {{data.lank}}
+            {{ data.title }}
+           </a>
           </div> 
         </tr>
         </td>
         {% endfor %}
       </table>
+    </div>
     {% endblock %}
   </body>
 </html>
